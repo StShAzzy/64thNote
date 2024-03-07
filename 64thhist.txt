@@ -1,0 +1,246 @@
+milestones in 64th Note history
+
+03/31/07 - 64th Note v1.2 beta 3
+         * Extended File Info
+         * Multiple user settings support
+         * Built with MSVS 2005 (All older versions were MSVS6)
+
+08/17/06 - 64th Note v1.2 beta 1
+         * better AI interrupt handling
+
+02/10/06 - 64th Note v1.1 FINAL released
+         * Proper initialization of tag flags (FIFOFull, CountException)
+         * 1.1 has been stable for a while, it's time to get the memory fix out there.
+
+12/04/05 - 64th Note v1.1 beta 4 released
+         * In a lot of situations the Fade Type dropdown list didn't appear, this has been fixed.
+           Also, "no fade" has been added as an option, for those who would like an abrupt ending
+           (or want to let their output plugin handle it)
+
+12/03/05 - 64th Note v1.1 beta 3 released
+         * reg caching reenabled (was disabled in beta 2, it caused problems which are now fixed), better speed
+
+12/03/05 - 64th Note v1.1 beta 2 released
+         * implemented method for register access via exception handler that works with new memory allocation,
+           needed for several games, also allows Animal Forest to run under interpreter
+
+11/29/05 - 64th Note v1.1 beta 1 released
+         * changed memory allocation, seems to fix some problems (in_tv)
+
+11/23/05 - 64th Note v1.0 FINAL released
+         * Escape key now closes windows properly
+         * no bug reports for long enough to call it FINAL
+
+11/05/05 - 64th Note v1.0 beta 23 released
+         * AI FIFO full setting added (Excitebike 64), uses _enableFIFOfull tag
+
+10/31/05 - 64th Note v1.0 beta 22 released
+         * removed DirectSound buffer problem workaround, turned out to be unneeded
+         * pause/unpause now only occur when they'd actually do something (fixed ASIO crash)
+         * updated in_usf.ini (Mario Kart 64 no longer set for Auto Audio HLE, Shadowgate 64 added)
+
+10/26/05 - 64th Note v1.0 beta 21 released
+         * Fixed bug with loading save states with FR in the status reg set (Turok 3)
+         * Workaround for a buffer problem with DirectSound output plugin, track would
+           cut off half second too soon
+
+10/10/05 - 64th Note v1.0 beta 20 released
+         * made it impossible to open two info windows at once (Winamp shouldn't allow anyway)
+         * switched more errors from MessageBox to DisplayError, so they'll be controlled by the
+           configuration
+
+10/07/05 - 64th Note v1.0 beta 19 released
+         * fixed issue where emulation runs full-speed on track end (eating all available CPU), now
+           safer to use with higher priority
+
+10/06/05 - 64th Note v1.0 beta 18 released
+         * removed "speed fix" from last version, actually only made things worse
+
+10/05/05 - 64th Note v1.0 beta 17 released
+         * greatly improved CPU sharing behavior (esp. in Chopper Attack, Snowboard Kids)
+         * INI settings will return to default if not set by the current version
+         * clarified help
+         * changed a few things because windows doesn't actually require two carriage returns
+           in multiline edit boxes
+
+09/29/05 - 64th Note v1.0 beta 16 released
+         * round frequency now uses in_usf.ini for its values
+         * also round frequency will default to the old algorithm and use the nearest mutliple of
+           50 Hz as the frequency if no setting is found for a specific dacrate
+
+09/27/05 - 64th Note v1.0 beta 15 released
+         * removed a warning and interrupt in GenerateSectionLinkages (needed for Mario Tennis)
+         * added Auto Audio HLE
+
+09/26/05 - 64th Note v1.0 beta 14 released
+         * fixed tab order, focus in dialogs
+
+09/26/05 - 64th Note v1.0 beta 13 released (30 minutes later)
+         * cleaned up dialog design issues
+
+09/26/05 - 64th Note v1.0 beta 12 released
+         * added alternate fade types (linear, log, cos)
+         * cleaned out unused options
+         * added "Track" field to USF Info window
+         * changed "Tagger" to "Tagged by"
+         * generally rearranged USF Info window
+
+09/21/05 - 64th Note v1.0 beta 11 released
+         * removed unused debug, COM, GUI, profiling, FPS, pause/stepping stuff (saved 84 kb)
+         * reduced CPU Thread termination timeout on close to .2 seconds (rather than 2 seconds)
+         * first source release for 1.0
+
+09/15/05 - 64th Note v1.0 beta 10 released
+         * (Hopefully) fixes track skipping problem (end of track message now only sent once).
+
+09/15/05 - 64th Note v1.0 beta 9 released
+         * fixed an issue with timing in XMPlay
+         * cleaned up some audio code
+         * added help box
+         * raw tags now editable
+
+09/13/05 - 64th Note v1.0 beta 8 released
+         * Added Azimer's Audio HLE from Mupen 0.5
+
+09/12/05 - 64th Note v1.0 beta 7 released
+         * seek backwards added as an option
+         * detect silence disabled by default
+
+09/12/05 - 64th Note v1.0 beta 6 released
+         * error display now optional
+         * loading errors now handled more gracefully, should be able to skip without crashing
+         * redid "64th" part of logo, smaller file size
+
+09/12/05 - 64th Note v1.0 beta 5 released
+         * fixed config dialog so whole cpu priority name can be seen
+         * fixed problem with tracks without fade tag taking on previous track's fade
+         * fixed bugs with Play Forever (fade cannot be set if length=0, clearly the fade
+           will end at the very beginning and start before the track starts, so now fade
+           is cleared on loading)
+
+09/09/05 - 64th Note v1.0 beta 4 released
+         * Fixed a bug in RSP where it would attempt to deallocate already deallocated memory
+           (this fixes at least one crash bug). I went ahead and cleared up similar situations
+           anywhere else VirtualFree was used.
+         * silence detection now won't end a track until it's actually played to the point where
+           the silence starts, which should fix things for users with large buffers (before the
+           track would end as soon as the specified amount of silence was *rendered*)
+         * fixed bug wherein default length wouldn't be used
+         * added "always use default length" option (by request)
+         * rearranged config dialog
+         * switched config settings to plugin.ini
+
+09/07/05 - 64th Note v1.0 beta 3 released
+         * fixed timing (switched cumulative time from long to double)
+         * cleaned up end of track shutdown
+
+09/06/05 - 64th Note v1.0 beta 2 released
+         * complete rewrite (except for a few bits of audio output and UI)
+         * first released beta of 1.0 (beta 1 was internal)
+         * using Project 64 1.6 CPU core (rather than 1.4 as in previous versions)
+         * uses winamp.ini for storing settings
+         * only one DLL needed
+
+08/23/05 - work begins on v1.0
+
+07/22/05 - decided to rewrite 64th Note
+
+07/16/05 - 64th Note v0.10 beta 2 released
+         * round frequency option introduced, default is now actual N64 frequency
+         * fixed info window writing tags to another file if it track changes while editing
+         * title can default to file name or just leave missing tags blank
+
+07/14/05 - 64th Note v0.10 beta 1 released
+         * added tagger field to editor
+         * fixed fade-up after track end
+
+04/19/05 - 64th Note v0.09 released
+         * Fixed uninitalized STATUS reg (PJ64 save state bug). This fixes the problem where
+           playing certain track in order would freeze, for example Pilotwings after Perfect Dark.
+         * Cleaned up RSP setup/teardown.
+         * Fixed a minor, unimportant registry bug.
+         * Removed a lot of useless error messages and rephrased the important ones ("what's in
+           code?" now actually tells you you're using an old USF, "seeking backwards not supported"
+           is removed, etc.)
+         - People who used to experience a lot of crashes report that v0.09 hasn't crashed at all.
+
+02/13/05 - 64th Note downloaded 10,000 times from winamp.com
+
+11/01/04 - 64th Note v0.08 released
+         * Uses less memory
+         * Track title defaults to file name
+         * Non-broken amplification
+
+10/15/05 - 64th Note v0.07 released
+         * "RSP sections" now optinal, disabled by default, for more accuracy
+         * Slightly more failproof silence detection
+         * removed more RSP debugging stuff
+         * added genre tag reading
+
+10/10/04 - 64th Note v0.06 released
+         * Count Exception returns! (needed for Perfect Dark, Banjo Kazooie, and other soon-to-be-released sets)
+         * Spiffy logo
+         * Stereo channels are no longer reversed
+         * Volume control: overall and individual USFs
+         * slight modification to sample rate calculation
+         * Longer silence detection default so Majora's Mask - Staff Roll doesn't stop before the end
+
+10/04/04 - 64th Note v0.05
+         * Fixed memory leak
+         * Minimal RDP support for Magical Tetris Challenge
+         * Adjustible CPU Priority
+         * No longer takes all CPU while seeking
+
+09/30/04 - 64th Note v0.04 released
+         * Equalizer/DSP plugins now work
+         * Tag editing/creation
+         * "now" timing
+         * Default track length
+         * silence detection
+         * Fixed recompiler bug in Pilot Wings!!! (faster, stabler!)
+
+09/25/04 - 64th Note v0.03 released
+         * support for more RAM (for Majora's Mask)
+         * fixes recompiler/interpreter switching bugs
+         * first use of frequency rounding?
+
+09/22/04 - 64th Note v0.02 released 
+         * "a few fixes" (released in tandem with F-Zero X)
+         * installer
+
+09/16/04 - 64th Note v0.01 released
+         * first official release
+         * "fixes many a bug"
+         * first to support final USF format (all data in reserved section)
+         * first source release
+
+04/11/04 - 64th Note build 51 released 
+         * first public proof-of-concept
+
+04/10/04 - USF format announced
+
+04/07/04 - 64th Note Build 49
+
+04/06/04 - 64th Note Build 48
+
+04/05/04 - 64th Note Build 47
+
+03/30/04 - 64th Note Build 45
+         * first to not require AziSndLLE.dll
+
+03/28/04 - 64th Note Build 44
+         * first on record with new name
+
+03/27/04 - Project64 USF v0.42
+
+03/26/04 - Project64 USF v0.41
+
+03/25/04 - Project64 USF v0.4
+         * first to not require RSPaudlle.dll
+
+03/24/04 - Project64 USF v0.3
+         * original name for the Winamp plugin
+
+03/08/04 - first N64 music isolation procedure complete (Super Mario 64)
+
+02/??/04 - started work on USF

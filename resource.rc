@@ -1,0 +1,276 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_INFO_WINDOW DIALOGEX 0, 0, 378, 209
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "USF Info"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,321,170,50,15
+    EDITTEXT        IDC_TRACK,48,22,29,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TITLE,48,36,196,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ARTIST,48,51,196,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GAME,48,66,196,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_YEAR,48,80,29,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GENRE,106,80,138,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_COPYRIGHT,48,94,196,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_USFBY,48,108,196,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TAGGER,48,123,196,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_COMMENT,48,138,196,59,ES_MULTILINE | ES_AUTOVSCROLL | ES_WANTRETURN | WS_VSCROLL
+    EDITTEXT        IDC_LENGTH,288,22,45,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Now",IDC_NOWBUT,337,21,30,15
+    EDITTEXT        IDC_FADE,288,36,45,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VOLUME,304,60,43,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Configure Plugin",IDC_LAUNCHCONFIG,256,170,61,15
+    PUSHBUTTON      "Raw Mode...",IDC_VIEWRAW,256,187,61,15
+    PUSHBUTTON      "Cancel",IDC_CANCEL,321,187,50,15
+    EDITTEXT        IDC_FILENAME,7,1,364,12,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "Tag",IDC_STATIC,7,14,243,188
+    LTEXT           "Title",IDC_STATIC,30,38,14,8
+    LTEXT           "Artist",IDC_STATIC,28,53,16,8
+    LTEXT           "Game",IDC_STATIC,24,68,20,8
+    LTEXT           "Year",IDC_STATIC,28,82,16,8
+    LTEXT           "Copyright",IDC_STATIC,14,96,30,8
+    LTEXT           "Length",IDC_STATIC,260,24,23,8
+    LTEXT           "Fade",IDC_STATIC,264,38,17,8
+    LTEXT           "USF By",IDC_STATIC,20,110,25,8
+    LTEXT           "Comment",IDC_STATIC,14,139,30,8
+    CONTROL         110,IDC_STATIC,"Static",SS_BITMAP,265,78,93,86,WS_EX_DLGMODALFRAME
+    LTEXT           "Volume",IDC_STATIC,274,62,24,8
+    LTEXT           "Genre",IDC_STATIC,82,82,19,8
+    LTEXT           "Tagged By",IDC_STATIC,10,125,36,8
+    LTEXT           "Track",IDC_STATIC,26,24,20,8
+    GROUPBOX        "Timing",IDC_STATIC,256,14,115,39
+END
+
+IDD_CONFIG_WINDOW DIALOGEX 0, 0, 269, 149
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "64th Note configuration"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,212,38,50,14
+    CONTROL         "Play Forever",IDC_NOLENGTH,"Button",BS_AUTORADIOBUTTON,7,7,55,8
+    CONTROL         "Always Use Default Length",IDC_SETLEN,"Button",BS_AUTORADIOBUTTON,7,17,101,8
+    CONTROL         "Default Length",IDC_DEFLEN,"Button",BS_AUTORADIOBUTTON,7,29,63,8
+    EDITTEXT        IDC_DEFLENVAL,71,28,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEFFADEVAL,71,42,38,12,ES_AUTOHSCROLL
+    CONTROL         "Detect Silence",IDC_DETSIL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,56,63,8
+    EDITTEXT        IDC_DETSILVAL,71,56,38,12,ES_AUTOHSCROLL
+    CONTROL         "Slider2",IDC_PRISLIDER,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,74,90,108,11
+    EDITTEXT        IDC_TITLEFMT,7,127,255,15,ES_AUTOHSCROLL
+    CONTROL         "Default to file name on missing field",IDC_FNONMISSINGTAG,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,50,114,124,8
+    CONTROL         "Use Recompiler CPU",IDC_RECOMPILER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,7,83,8
+    CONTROL         "Round Frequency",IDC_ROUNDFREQ,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,16,73,8
+    CONTROL         "Seek Backwards",IDC_BACKWARDS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,26,70,8
+    CONTROL         "Fast Seek",IDC_FASTSEEK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,35,48,8
+    CONTROL         "RSP Sections",IDC_SECTIONS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,45,60,8
+    CONTROL         "Soft Amplify",IDC_SOFTAMP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,54,53,8
+    CONTROL         "Audio HLE",IDC_AUDIOHLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,63,50,8
+    CONTROL         "Auto Audio HLE",IDC_AUTOAUDIOHLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,72,64,8
+    CONTROL         "Display Errors",IDC_DISPERROR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,81,58,8
+    EDITTEXT        IDC_RELVOL,211,104,28,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Cancel",IDCANCEL,212,54,50,14
+    PUSHBUTTON      "Help",IDHELPBUTTON,212,71,50,14
+    LTEXT           "Title format:",IDC_STATIC,7,113,38,8
+    LTEXT           "seconds",IDC_STATIC,112,29,28,8
+    LTEXT           "Default Fade",IDC_STATIC,19,43,42,8
+    LTEXT           "seconds",IDC_STATIC,112,43,28,8
+    LTEXT           "seconds",IDC_STATIC,112,57,28,8
+    CTEXT           "CPU Thread Priority",IDC_STATIC,7,91,63,8
+    CTEXT           "Look ma, I'm data!",IDC_CPUPRI,75,104,108,8
+    LTEXT           "Relative Volume",IDC_STATIC,199,94,52,8
+    LTEXT           "Fade Type",IDC_STATIC,7,75,35,8
+    COMBOBOX        IDC_FADETYPE,45,72,87,74,CBS_DROPDOWNLIST | WS_TABSTOP
+END
+
+IDD_RAWTAG_WINDOW DIALOG  0, 0, 274, 212
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Raw USF Tag"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,163,191,50,14
+    EDITTEXT        IDC_RAWTAG,5,5,262,183,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+    PUSHBUTTON      "Cancel",IDCANCEL,217,191,50,14
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 152, 151
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About 64th Note"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "64th Note v1.2 beta 3\nBased on Project 64 1.6 by Zilmar and Jabo\nAudio HLE by Azimer\nPSF concept and tagging by Neill Corlett\nPlayer by hcs, Josh W, dr0\nhttp://hcs64.com/usf",IDC_STATIC,7,94,138,50
+    CONTROL         110,IDC_STATIC,"Static",SS_BITMAP,26,7,95,86,WS_EX_DLGMODALFRAME
+END
+
+IDD_HELPBOX DIALOG  0, 0, 249, 247
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "64th Note Help"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "About",IDC_ABOUT,209,228,33,12
+    EDITTEXT        IDC_HELPTEXT,7,7,235,218,ES_MULTILINE | ES_READONLY | WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_INFO_WINDOW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 371
+        BOTTOMMARGIN, 202
+    END
+
+    IDD_CONFIG_WINDOW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 262
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 142
+    END
+
+    IDD_RAWTAG_WINDOW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 267
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 205
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 145
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 144
+    END
+
+    IDD_HELPBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 242
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 240
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,1,0,0
+ PRODUCTVERSION 1,1,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Halley's Comet Software"
+            VALUE "FileDescription", "in_usf"
+            VALUE "FileVersion", "1, 1, 0, 0"
+            VALUE "InternalName", "pj64player"
+            VALUE "LegalCopyright", "Copyright © 2004-2005"
+            VALUE "OriginalFilename", "in_usf.dll"
+            VALUE "ProductName", "64th Note"
+            VALUE "ProductVersion", "1, 1, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_64THLOGO            BITMAP                  "6411.bmp"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
